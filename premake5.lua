@@ -19,9 +19,9 @@ project "bgfx"
 
 	files
 	{
-		"../bx/include",
-		"src/*.cpp",
-		"src/*.h"
+		"include/bgfx/**.h",
+		"src/**.cpp",
+		"src/**.h"
 	}
 	excludes
 	{
@@ -36,10 +36,27 @@ project "bgfx"
 		"3rdparty/dxsdk/include",
 		"3rdparty/khronos"
 	}
-	filter "configurations:Release"
-		defines "BX_CONFIG_DEBUG=0"
+	links 
+	{
+		"bx",
+		"bimg",
+	}
+
 	filter "configurations:Debug"
 		defines "BX_CONFIG_DEBUG=1"
+		runtime "Debug"
+		symbols "on"
+
+	filter "configurations:Release"
+		defines "BX_CONFIG_DEBUG=0"
+		runtime "Release"
+		optimize "on"
+
+	filter "configurations:Dist"
+		defines "BX_CONFIG_DEBUG=0"
+		runtime "Release"
+		optimize "on"
+
 	filter "action:vs*"
 		defines "_CRT_SECURE_NO_WARNINGS"
 		excludes
