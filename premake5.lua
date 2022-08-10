@@ -21,7 +21,8 @@ project "bgfx"
 	{
 		"include/bgfx/**.h",
 		"src/**.cpp",
-		"src/**.h"
+		"src/**.h",
+		"3rdparty/meshoptimizer/src/**.cpp"
 	}
 	excludes
 	{
@@ -34,7 +35,8 @@ project "bgfx"
 		"include",
 		"3rdparty",
 		"3rdparty/dxsdk/include",
-		"3rdparty/khronos"
+		"3rdparty/khronos",
+		"3rdparty/meshoptimizer/src/"
 	}
 	links 
 	{
