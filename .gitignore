@@ -7,3 +7,6 @@ tags
 .gdb_history
 .vscode
 *.TMP
+bin/
+obj/
+*.vcxproj*
