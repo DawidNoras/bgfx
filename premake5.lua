@@ -16,6 +16,7 @@ project "bgfx"
 	exceptionhandling "Off"
 	rtti "Off"
 	defines "__STDC_FORMAT_MACROS"
+	_3rd_party_location_dir()
 
 	files
 	{
